@@ -249,17 +249,22 @@
       </div>
 
       <div class="sub-section-box">
-        <div class="sub-section-title">🏦 取引銀行口座登録情報</div>
-        <div class="form-group"><label for="invoiceCompanyName">請求書記入社名 <span style="color:red;">*</span></label><input type="text" id="invoiceCompanyName" class="req-bank-field" placeholder="例: 株式会社〇〇"></div>
+        <div class="sub-section-title">🏦 請求書</div>
+        <div class="form-group"><label for="invoiceCompanyName">社名 <span style="color:red;">*</span></label><input type="text" id="invoiceCompanyName" class="req-bank-field" placeholder="例: 株式会社〇〇"></div>
         <div class="form-group"><label for="invoiceDeptName">部署名</label><input type="text" id="invoiceDeptName" placeholder="例: 営業部"></div>
         <div class="form-group"><label for="invoicePostalCode">郵便番号 <span style="color:red;">*</span></label><input type="text" id="invoicePostalCode" class="req-bank-field" placeholder="例: 123-4567" oninput="convertToHalfWidth(this)"></div>
         <div class="form-group"><label for="invoiceAddress">住所 <span style="color:red;">*</span></label><input type="text" id="invoiceAddress" class="req-bank-field" placeholder="例: 東京都江東区〇〇 1-2-3"></div>
         <div class="form-group"><label for="invoiceTel">電話番号 <span style="color:red;">*</span></label><input type="tel" id="invoiceTel" class="req-bank-field" placeholder="例: 03-1234-5678" oninput="convertToHalfWidth(this)"></div>
         <div class="form-group"><label for="invoiceFax">FAX</label><input type="tel" id="invoiceFax" placeholder="例: 03-1234-5679" oninput="convertToHalfWidth(this)"></div>
-        <div class="form-group"><label for="invoiceNumber">インボイス番号 <span style="color:red;">*</span></label><input type="text" id="invoiceNumber" class="req-bank-field" placeholder="例: T〇〇〇〇〇〇" oninput="convertToHalfWidth(this)"></div>
+      </div>
+    </div>
+<div class="sub-section-box">
+        <div class="sub-section-title">🏦 口座登録情報</div>
+        <div class="form-group"><label for="invoiceDeptName">インボイス番号</label><input type="text" id="invoiceDeptName" placeholder="例: T〇〇〇〇〇"></div>
         <div class="form-group"><label for="bankName">銀行名 <span style="color:red;">*</span></label><input type="text" id="bankName" class="req-bank-field" placeholder="例: 三菱UFJ銀行"></div>
         <div class="form-group"><label for="branchName">支店名 <span style="color:red;">*</span></label><input type="text" id="branchName" class="req-bank-field" placeholder="例: 本店営業部"></div>
-        <div class="form-group">
+ <div class="form-group"><label>請求書送付先メールアドレス <span style="color:red;">*</span></label><input type="email" class="worker-email" required placeholder="例: worker@example.com"></div>
+  <div class="form-group">
           <label for="accountType">種別 <span style="color:red;">*</span></label>
           <select id="accountType" class="req-bank-field">
             <option value="">選択してください</option>
@@ -267,8 +272,8 @@
             <option value="定期">定期</option>
           </select>
         </div>
-        <div class="form-group"><label for="accountName">口座名義 <span style="color:red;">*</span></label><input type="text" id="accountName" class="req-bank-field" placeholder="例: カ) 〇〇サービス"></div>
         <div class="form-group"><label for="accountNumber">口座番号 <span style="color:red;">*</span></label><input type="text" id="accountNumber" class="req-bank-field" placeholder="例: 1234567" oninput="convertToHalfWidth(this)"></div>
+        <div class="form-group"><label for="accountName">口座名義 <span style="color:red;">*</span></label><input type="text" id="accountName" class="req-bank-field" placeholder="例: カ) 〇〇サービス"></div>
       </div>
     </div>
 
