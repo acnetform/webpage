@@ -782,6 +782,7 @@
     }
 
     if (!isValid) {
+      alert('未入力または入力内容に不備がある項目があります。赤く表示された項目をご確認ください。');
       if (firstInvalidEl) {
         firstInvalidEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         firstInvalidEl.focus();
