@@ -768,9 +768,9 @@
       for (const input of fileInputs) {
         const f = input.files[0];
         if (!f) continue;
-        const errMsg = !/\.pdf$/i.test(f.name) ? `「${f.name}」はPDFではありません。PDFファイルを添付してください。`
-                     : f.size > MAX_FILE_BYTES ? `「${f.name}」のサイズが大きすぎます（1ファイル10MBまで）。`
-                     : null;
+     const errMsg = (currentType === '新規' && !/\.pdf$/i.test(f.name)) ? `「${f.name}」はPDFではありません。PDFファイルを添付してください。`
+             : f.size > MAX_FILE_BYTES ? `「${f.name}」のサイズが大きすぎます（1ファイル10MBまで）。`
+             : null;
         if (errMsg) {
           isValid = false;
           input.classList.add('is-invalid-error');
