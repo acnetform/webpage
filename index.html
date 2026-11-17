@@ -484,31 +484,9 @@
     }
   }
 
-  async function openPdf(fileKey) {
-    // fetch完了後の window.open はポップアップブロックされる（特にiPhone Safari）ため、クリック直後にタブを確保しておく
-    const win = window.open('', '_blank');
-    if (win) {
-      win.opener = null;
-      win.document.write('<p style="font-family:sans-serif;">読み込み中...</p>');
-    }
-    try {
-      const response = await fetch(`${GAS_URL}?fileKey=${encodeURIComponent(fileKey)}`);
-      const data = await readJsonResponse(response);
-      if (data.url) {
-        if (win) {
-          win.location.href = data.url;
-        } else {
-          window.location.href = data.url;
-        }
-      } else {
-        if (win) win.close();
-        alert('ファイルの取得に失敗しました。' + (data.error ? '\n' + data.error : ''));
-      }
-    } catch (error) {
-      if (win) win.close();
-      alert('通信エラーが発生しました。');
-    }
-  }
+function openPdf(fileKey) {
+  window.open(GAS_URL + '?open=1&fileKey=' + encodeURIComponent(fileKey), '_blank');
+}
 
   function selectRadio(id, type) {
     const radio = document.getElementById(id);
